@@ -74,6 +74,8 @@ struct ColoringView: View {
     @State private var showDenied = false
     @State private var confirmReset = false
     @State private var saving = false
+    @Environment(\.horizontalSizeClass) private var hSize
+    private var k: CGFloat { hSize == .regular ? 1.45 : 1 }
 
     init(motif: Motif) {
         _model = StateObject(wrappedValue: ColoringModel(motif: motif))
@@ -97,7 +99,7 @@ struct ColoringView: View {
                             PaletteView(model: model, columns: 4)
                             Spacer(minLength: 0)
                         }
-                        .frame(maxWidth: 360)
+                        .frame(maxWidth: hSize == .regular ? 470 : 360)
                     }
                     .padding(12)
                 } else {
@@ -174,8 +176,8 @@ struct ColoringView: View {
                     Button { model.brushSize = size } label: {
                         Circle()
                             .fill(Color(hex: 0x2B2D42))
-                            .frame(width: 10 + size.width * 3.2, height: 10 + size.width * 3.2)
-                            .frame(width: 44, height: 44)
+                            .frame(width: (8 + size.width * 2.6) * k, height: (8 + size.width * 2.6) * k)
+                            .frame(width: 38 * k, height: 38 * k)
                             .background(Circle().fill(selected ? Color(hex: 0xFFD23F) : .white))
                             .overlay(Circle().strokeBorder(Color(hex: 0xD9CFF5), lineWidth: 3))
                     }
@@ -199,8 +201,8 @@ struct ColoringView: View {
         let selected = model.tool == tool
         return Button { model.tool = tool } label: {
             Text(emoji)
-                .font(.system(size: 34))
-                .frame(width: 64, height: 64)
+                .font(.system(size: 30 * k))
+                .frame(width: 58 * k, height: 58 * k)
                 .background(RoundedRectangle(cornerRadius: 20, style: .continuous)
                     .fill(selected ? Color(hex: 0xFFD23F) : .white))
                 .overlay(RoundedRectangle(cornerRadius: 20, style: .continuous)

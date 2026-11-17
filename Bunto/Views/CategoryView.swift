@@ -16,7 +16,12 @@ struct CategoryView: View {
     @ObservedObject private var store = ProgressStore.shared
     @Environment(\.displayScale) private var displayScale
 
-    private let columns = [GridItem(.adaptive(minimum: 150, maximum: 260), spacing: 16)]
+    @Environment(\.horizontalSizeClass) private var hSize
+    private var columns: [GridItem] {
+        hSize == .regular
+            ? [GridItem(.adaptive(minimum: 260, maximum: 400), spacing: 24)]
+            : [GridItem(.adaptive(minimum: 150, maximum: 260), spacing: 16)]
+    }
 
     var body: some View {
         ZStack {

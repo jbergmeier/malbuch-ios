@@ -6,3 +6,4 @@ DerivedData/
 tools/motifs/_preview/
 tools/motifs/__pycache__/
 Bunto/Info.plist
+build/

@@ -4,7 +4,12 @@ struct HomeView: View {
     private let catalog = Catalog.shared
     @State private var surprise: Motif?
 
-    private let columns = [GridItem(.adaptive(minimum: 150, maximum: 240), spacing: 18)]
+    @Environment(\.horizontalSizeClass) private var hSize
+    private var columns: [GridItem] {
+        hSize == .regular
+            ? [GridItem(.adaptive(minimum: 230, maximum: 340), spacing: 24)]
+            : [GridItem(.adaptive(minimum: 150, maximum: 240), spacing: 18)]
+    }
 
     var body: some View {
         NavigationStack {
@@ -63,12 +68,13 @@ struct HomeView: View {
 }
 
 struct CategoryCard: View {
+    @Environment(\.horizontalSizeClass) private var hSize
     let category: MotifCategory
 
     var body: some View {
         VStack(spacing: 8) {
             Text(category.emoji)
-                .font(.system(size: 66))
+                .font(.system(size: hSize == .regular ? 96 : 66))
             Text(category.name)
                 .font(Theme.rounded(22))
                 .foregroundStyle(Color(hex: 0x2B2D42))
