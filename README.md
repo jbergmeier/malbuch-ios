@@ -26,6 +26,9 @@ python3 tools/motifs/build.py      # schreibt Bunto/Resources/motifs.json + Vors
 python3 tools/make_icon.py Bunto/Resources/Assets.xcassets/AppIcon.appiconset/icon.png
 ```
 
+## Veröffentlichen
+Anleitung: [docs/appstore/RELEASE.md](docs/appstore/RELEASE.md) · Store-Texte: [docs/appstore/listing.md](docs/appstore/listing.md) · Screenshots: `docs/appstore/screenshots/`
+
 ## Checkliste App-Store-Veröffentlichung
 - [ ] Apple Developer Account (99 $/Jahr), App in App Store Connect anlegen (Name „Bunto“ prüfen, ggf. Untertitel ergänzen).
 - [ ] **Kids Category** wählen (Alter 5 und jünger oder 6–8): erlaubt, da keine Werbung, kein Tracking, keine Drittanbieter-SDKs, keine externen Links, keine Käufe.

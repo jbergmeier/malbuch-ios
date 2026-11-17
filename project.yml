@@ -49,3 +49,28 @@ targets:
         ITSAppUsesNonExemptEncryption: false
         LSRequiresIPhoneOS: true
         UIRequiredDeviceCapabilities: [arm64]
+  BuntoUITests:
+    type: bundle.ui-testing
+    platform: iOS
+    sources:
+      - path: Tests/UITests
+    dependencies:
+      - target: Bunto
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.example.bunto.uitests
+        GENERATE_INFOPLIST_FILE: YES
+        TEST_TARGET_NAME: Bunto
+schemes:
+  Bunto:
+    build:
+      targets:
+        Bunto: all
+    run:
+      config: Debug
+    test:
+      config: Debug
+      targets:
+        - BuntoUITests
+    archive:
+      config: Release
