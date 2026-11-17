@@ -153,7 +153,7 @@ struct ColoringView: View {
 
     private var topBar: some View {
         HStack(spacing: 12) {
-            BackButton(systemName: "house.fill")
+            BackButton()
             Spacer(minLength: 4)
             CircleIconButton(systemName: "arrow.uturn.backward", label: "undo",
                              tint: Color(hex: 0xFF8C42), enabled: model.canUndo) { model.undo() }

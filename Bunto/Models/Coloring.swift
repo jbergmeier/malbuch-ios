@@ -111,6 +111,19 @@ final class ColoringModel: ObservableObject {
             pendingSnapshot = nil
             startRegion = nil
         }
+        // Radierer antippen: ganze Fläche wieder weiß machen
+        if tool == .eraser, let r = startRegion, travel < 3 {
+            if coloring.fills[r] != nil || coloring.strokes.contains(where: { $0.region == r }) {
+                push(coloring)
+                coloring.fills[r] = nil
+                coloring.strokes.removeAll { $0.region == r }
+                commit()
+                Haptics.tap()
+            } else {
+                redraw?()
+            }
+            return
+        }
         if let stroke = current {
             if let snap = pendingSnapshot { push(snap) }
             coloring.strokes.append(stroke)
