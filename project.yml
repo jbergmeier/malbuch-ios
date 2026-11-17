@@ -1,0 +1,51 @@
+# XcodeGen-Konfiguration. Projekt erzeugen mit:  xcodegen generate
+name: Bunto
+options:
+  bundleIdPrefix: com.example      # <- auf deine Domain ändern (z. B. de.deinefirma)
+  deploymentTarget:
+    iOS: "17.0"
+  developmentLanguage: en
+  createIntermediateGroups: true
+settings:
+  base:
+    SWIFT_VERSION: "5.0"
+    MARKETING_VERSION: "1.0.0"
+    CURRENT_PROJECT_VERSION: "1"
+    TARGETED_DEVICE_FAMILY: "1,2"        # iPhone + iPad
+    DEVELOPMENT_TEAM: ""                 # <- deine Apple-Team-ID eintragen
+    CODE_SIGN_STYLE: Automatic
+    ENABLE_USER_SCRIPT_SANDBOXING: YES
+targets:
+  Bunto:
+    type: application
+    platform: iOS
+    sources:
+      - path: Bunto
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.example.bunto
+        PRODUCT_NAME: Bunto
+        ASSETCATALOG_COMPILER_APPICON_NAME: AppIcon
+        ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME: AccentColor
+        GENERATE_INFOPLIST_FILE: NO
+    info:
+      path: Bunto/Info.plist
+      properties:
+        CFBundleDisplayName: Bunto
+        CFBundleDevelopmentRegion: en
+        CFBundleLocalizations: [en, de]
+        UILaunchScreen:
+          UIColorName: LaunchBackground
+        UIApplicationSceneManifest:
+          UIApplicationSupportsMultipleScenes: false
+        UISupportedInterfaceOrientations:
+          - UIInterfaceOrientationPortrait
+        UISupportedInterfaceOrientations~ipad:
+          - UIInterfaceOrientationPortrait
+          - UIInterfaceOrientationPortraitUpsideDown
+          - UIInterfaceOrientationLandscapeLeft
+          - UIInterfaceOrientationLandscapeRight
+        NSPhotoLibraryAddUsageDescription: Bunto saves your finished coloring pictures to your Photos.
+        ITSAppUsesNonExemptEncryption: false
+        LSRequiresIPhoneOS: true
+        UIRequiredDeviceCapabilities: [arm64]

@@ -1,0 +1,8 @@
+*.xcodeproj
+xcuserdata/
+DerivedData/
+.build/
+.DS_Store
+tools/motifs/_preview/
+tools/motifs/__pycache__/
+Bunto/Info.plist
