@@ -21,3 +21,7 @@ Version 1.0 (Build 1) ist zur App-Prüfung eingereicht, Status „Warten auf Pr�
 1. **Vereinbarung für gebührenpflichtige Apps** (Bank/Steuer) in App Store Connect → Geschäftliches abschließen, sonst kann die kostenpflichtige App nicht veröffentlicht werden.
 2. Website bunto.webcoffee.io: „kostenlos“-Texte an den Preis anpassen, „Bald im App Store“ durch den Link ersetzen.
 3. Optional: englische Lokalisierung.
+
+
+## Update 18.11.2026 (später)
+Version 1.0 wurde aus der Prüfung genommen und mit **Build 2** (128 Motive, 15 Kategorien, Regenbogenfarbe) neu eingereicht (Status „Warten auf Prüfung“, 18:22). Veröffentlichung automatisch, Preis 0,79 €. Hinweis: Xcode erhöht beim Upload die Build-Nummer selbst; die Versionsnummer in `Info.plist` bleibt 1.0 (MARKETING_VERSION in project.yml wirkt nicht – für 1.1 ggf. die Info.plist-Erzeugung prüfen). Offen: Ostern, Halloween als nächste Updates.

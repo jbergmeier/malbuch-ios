@@ -6,7 +6,7 @@ Zeichenlimits von App Store Connect in Klammern. Alles kann direkt kopiert werde
 
 **Name (25):** Bunto – Malen für Kinder
 **Untertitel (30):** Ausmalen ohne Werbung
-**Werbetext (170):** Ausmalen ohne Werbung und ohne In-App-Käufe: 94 liebevoll gezeichnete Motive – und regelmäßig neue, auch zu Ostern, Halloween & Weihnachten.
+**Werbetext (170):** Ausmalen ohne Werbung und ohne In-App-Käufe: 128 liebevoll gezeichnete Motive – und regelmäßig neue, auch zu Ostern, Halloween & Weihnachten.
 **Keywords (100):** malen,ausmalen,malbuch,kinder,dinos,mandala,kleinkind,färben,zeichnen,vorschule,tiere,bauernhof
 **Support-URL:** https://bunto.webcoffee.io
 **Datenschutz-URL:** https://bunto.webcoffee.io/datenschutz (Impressum: /impressum)
@@ -19,7 +19,7 @@ Farbe wählen, Fläche antippen, fertig: Bunto macht Ausmalen für Kinder einfac
 KEINE WERBUNG. KEINE IN-APP-KÄUFE.
 Bunto enthält weder Werbung noch In-App-Käufe – nicht in dieser Version und auch nicht in künftigen Updates. Kein Konto, kein Login, keine Datensammlung, keine Links nach draußen. Alles funktioniert komplett offline.
 
-94 SELBST GEZEICHNETE MOTIVE IN 11 WELTEN
+128 SELBST GEZEICHNETE MOTIVE IN 15 WELTEN
 Dinos, Baustelle, Häuser, Mandalas, Tiere, Meer, Fahrzeuge, Weltraum, Essen, Natur und Fantasie – jedes Motiv ist ein Original, ganz ohne Fremdmaterial.
 
 EINFACH FÜR KLEINE FINGER
@@ -46,7 +46,7 @@ Bunto wird mit Liebe in Hamm entwickelt von Jörn Bergmeier, Bergmeier&Bergmeier
 
 **Name (30):** Bunto – Coloring for Kids
 **Subtitle (30):** Ad-free coloring fun
-**Promotional text (170):** Coloring without ads and without in-app purchases: 94 lovingly drawn pictures – plus new ones regularly, including Easter, Halloween & Christmas.
+**Promotional text (170):** Coloring without ads and without in-app purchases: 128 lovingly drawn pictures – plus new ones regularly, including Easter, Halloween & Christmas.
 **Keywords (100):** coloring,kids,toddler,paint,draw,dinosaur,mandala,preschool,animals,drawing,color book
 **Support URL:** https://bunto.webcoffee.io
 **Privacy URL:** https://bunto.webcoffee.io/datenschutz
@@ -59,7 +59,7 @@ Pick a color, tap an area, done: Bunto makes coloring simple, colorful and compl
 NO ADS. NO IN-APP PURCHASES.
 Bunto contains no advertising and no in-app purchases – not in this version and not in future updates. No account, no login, no data collection, no outbound links. Everything works fully offline.
 
-94 HAND-DRAWN PICTURES IN 11 WORLDS
+128 HAND-DRAWN PICTURES IN 15 WORLDS
 Dinosaurs, construction, houses, mandalas, animals, ocean, vehicles, space, food, nature and fantasy – every picture is an original, with no third-party material.
 
 EASY FOR LITTLE FINGERS
