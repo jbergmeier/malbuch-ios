@@ -204,3 +204,39 @@ class Motif:
                 "regions": [p.d() for p in self.regions],
                 "lines": [p.d() for p in self.lines],
                 "dots": [p.d() for p in self.dots]}
+
+
+def fir(cx, top, bottom, hw, teeth=4, r=1.5):
+    """Tannen-Etage: Spitze oben, gezackter Boden."""
+    pts = [(cx, top)]
+    # rechte Kante mit leichten Absätzen
+    for i in range(1, 4):
+        t = i / 4
+        pts.append((cx + hw * t * 0.92 + (1.5 if i % 2 else 0), top + (bottom - top) * t))
+    pts.append((cx + hw, bottom))
+    # gezackter Boden von rechts nach links
+    n = teeth * 2
+    for i in range(1, n):
+        x = cx + hw - 2 * hw * i / n
+        pts.append((x, bottom - (4 if i % 2 else 0) - 0.0))
+    pts.append((cx - hw, bottom))
+    for i in range(3, 0, -1):
+        t = i / 4
+        pts.append((cx - hw * t * 0.92 - (1.5 if i % 2 else 0), top + (bottom - top) * t))
+    return rpoly(pts, r)
+
+
+def annulus(cx, cy, r0, r1, a0, a1, n=6):
+    """Ringstück (Winkel in Grad)."""
+    outer = [(cx + r1 * math.cos(math.radians(a0 + (a1 - a0) * i / n)),
+              cy + r1 * math.sin(math.radians(a0 + (a1 - a0) * i / n))) for i in range(n + 1)]
+    inner = [(cx + r0 * math.cos(math.radians(a1 - (a1 - a0) * i / n)),
+              cy + r0 * math.sin(math.radians(a1 - (a1 - a0) * i / n))) for i in range(n + 1)]
+    return rpoly(outer + inner, 0)
+
+
+def bar(x0, y0, x1, y1, w, r=None):
+    """Abgerundeter Balken zwischen zwei Punkten (Äste, Zweige, Stäbe)."""
+    L = math.hypot(x1 - x0, y1 - y0)
+    ang = math.degrees(math.atan2(y1 - y0, x1 - x0))
+    return rect(x0, y0 - w / 2, L, w, w / 2 if r is None else r).rot(ang, x0, y0)

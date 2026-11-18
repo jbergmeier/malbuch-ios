@@ -2,7 +2,7 @@ import json, sys, os, importlib, subprocess
 sys.path.insert(0, os.path.dirname(__file__))
 from dsl import *
 
-CATS = ["dinos", "baustelle", "haeuser", "mandalas", "tiere", "meer", "fahrzeuge", "weltraum", "essen", "natur", "fantasie"]
+CATS = ["weihnachten", "advent", "winter", "freimalen", "dinos", "baustelle", "haeuser", "mandalas", "tiere", "meer", "fahrzeuge", "weltraum", "essen", "natur", "fantasie"]
 OUT = os.path.join(os.path.dirname(__file__), "..", "..", "Bunto", "Resources", "motifs.json")
 INK = "#2B2D42"
 
@@ -47,4 +47,7 @@ if __name__ == "__main__":
     js = "const {chromium}=require('playwright');(async()=>{const b=await chromium.launch();const p=await b.newPage({viewport:{width:1262,height:700}});" + \
         "".join(f"await p.goto('file://{os.path.abspath(prev)}/{c['id']}.html');await p.screenshot({{path:'{os.path.abspath(prev)}/{c['id']}.png',fullPage:true}});" for c in cats) + "await b.close()})()"
     open(f"{prev}/shot.js", "w").write(js)
-    subprocess.run(["node", f"{prev}/shot.js"], check=True)
+    try:
+        subprocess.run(["node", f"{prev}/shot.js"], check=True)
+    except Exception:
+        print("(Vorschau-PNGs übersprungen – playwright fehlt; HTML-Vorschau: preview.py)")

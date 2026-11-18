@@ -96,7 +96,7 @@ struct ColoringView: View {
                             topBar
                             Spacer(minLength: 0)
                             toolsBar
-                            PaletteView(model: model, columns: 4)
+                            PaletteView(model: model, columns: 5)
                             Spacer(minLength: 0)
                         }
                         .frame(maxWidth: hSize == .regular ? 470 : 360)
@@ -108,7 +108,7 @@ struct ColoringView: View {
                         canvas
                             .frame(maxWidth: min(geo.size.width, max(geo.size.height - 260, 220)))
                         toolsBar
-                        PaletteView(model: model, columns: 7)
+                        PaletteView(model: model, columns: 8)
                         Spacer(minLength: 0)
                     }
                     .padding(.horizontal, 14)
@@ -237,6 +237,16 @@ struct PaletteView: View {
     @ObservedObject var model: ColoringModel
     let columns: Int
 
+    @ViewBuilder
+    private func swatch(_ i: Int) -> some View {
+        if Palette.isRainbow(i) {
+            Circle().fill(AngularGradient(colors: Palette.rainbowHexes.map { Color(hex: $0) } + [Color(hex: Palette.rainbowHexes[0])],
+                                          center: .center))
+        } else {
+            Circle().fill(Palette.color(i))
+        }
+    }
+
     var body: some View {
         let cols = Array(repeating: GridItem(.flexible(), spacing: 10), count: columns)
         LazyVGrid(columns: cols, spacing: 10) {
@@ -246,8 +256,7 @@ struct PaletteView: View {
                     model.colorIndex = i
                     if model.tool == .eraser { model.tool = .fill }
                 } label: {
-                    Circle()
-                        .fill(Palette.color(i))
+                    swatch(i)
                         .aspectRatio(1, contentMode: .fit)
                         .overlay(Circle().strokeBorder(.white, lineWidth: 3))
                         .overlay(Circle().strokeBorder(selected ? Color(hex: 0x2B2D42) : .clear, lineWidth: 4).padding(-4))
@@ -257,7 +266,7 @@ struct PaletteView: View {
                         .frame(maxWidth: 64)
                 }
                 .buttonStyle(BouncyButtonStyle())
-                .accessibilityLabel("color")
+                .accessibilityLabel(Palette.isRainbow(i) ? LocalizedStringKey("color_rainbow") : LocalizedStringKey("color"))
                 .accessibilityAddTraits(selected ? .isSelected : [])
             }
         }

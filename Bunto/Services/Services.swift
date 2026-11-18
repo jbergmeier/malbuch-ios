@@ -65,9 +65,23 @@ enum CanvasRenderer {
         let byRegion = Dictionary(grouping: all, by: { $0.region })
 
         for (i, path) in motif.regions.enumerated() {
-            cg.addPath(path)
-            cg.setFillColor(Palette.ui(coloring.fills[i] ?? -1).cgColor)
-            cg.fillPath()
+            let fillIndex = coloring.fills[i] ?? -1
+            if Palette.isRainbow(fillIndex) {
+                cg.saveGState()
+                cg.addPath(path)
+                cg.clip()
+                let box = path.boundingBox
+                let colors = (Palette.rainbowHexes + [Palette.rainbowHexes[0]]).map { UIColor(hex: $0).cgColor } as CFArray
+                if let g = CGGradient(colorsSpace: CGColorSpaceCreateDeviceRGB(), colors: colors, locations: nil) {
+                    cg.drawLinearGradient(g, start: CGPoint(x: box.minX, y: box.minY),
+                                          end: CGPoint(x: box.maxX, y: box.maxY), options: [.drawsBeforeStartLocation, .drawsAfterEndLocation])
+                }
+                cg.restoreGState()
+            } else {
+                cg.addPath(path)
+                cg.setFillColor(Palette.ui(fillIndex).cgColor)
+                cg.fillPath()
+            }
 
             if let list = byRegion[i] {
                 cg.saveGState()
@@ -99,6 +113,27 @@ enum CanvasRenderer {
 
     private static func draw(stroke s: BrushStroke, in cg: CGContext) {
         guard let first = s.points.first else { return }
+        if Palette.isRainbow(s.color) {
+            // Regenbogen-Pinsel: Farbe wechselt entlang des Strichs
+            cg.setLineWidth(s.width)
+            var dist: CGFloat = 0
+            var prev = first
+            if s.points.count == 1 {
+                cg.setFillColor(Palette.rainbow(at: 0).cgColor)
+                let r = s.width / 2
+                cg.fillEllipse(in: CGRect(x: first.x - r, y: first.y - r, width: s.width, height: s.width))
+                return
+            }
+            for p in s.points.dropFirst() {
+                dist += hypot(p.x - prev.x, p.y - prev.y)
+                cg.setStrokeColor(Palette.rainbow(at: dist / 18).cgColor)
+                cg.move(to: prev)
+                cg.addLine(to: p)
+                cg.strokePath()
+                prev = p
+            }
+            return
+        }
         let color = Palette.ui(s.color).cgColor
         if s.points.count == 1 {
             cg.setFillColor(color)

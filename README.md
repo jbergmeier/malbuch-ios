@@ -1,6 +1,6 @@
 # Bunto – Ausmal-App für Kinder (iPhone & iPad)
 
-Kostenlos, ohne Werbung, ohne Login, ohne Internet. 94 selbst erstellte, lizenzfreie Motive in 11 Kategorien
+Kostenlos, ohne Werbung, ohne Login, ohne Internet. 128 selbst erstellte, lizenzfreie Motive in 15 Kategorien (inkl. Weihnachten, Advent, Winter, Freies Malen)
 (Dinos, Baustelle, Häuser, Mandalas, Tiere, Meer, Fahrzeuge, Weltraum, Essen, Natur, Fantasie).
 
 ## Bedienung (für kleine Kinder)
