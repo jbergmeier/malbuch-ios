@@ -20,7 +20,7 @@ KEINE WERBUNG. KEINE IN-APP-KÄUFE.
 Bunto enthält weder Werbung noch In-App-Käufe – nicht in dieser Version und auch nicht in künftigen Updates. Kein Konto, kein Login, keine Datensammlung, keine Links nach draußen. Alles funktioniert komplett offline.
 
 128 SELBST GEZEICHNETE MOTIVE IN 15 WELTEN
-Dinos, Baustelle, Häuser, Mandalas, Tiere, Meer, Fahrzeuge, Weltraum, Essen, Natur und Fantasie – jedes Motiv ist ein Original, ganz ohne Fremdmaterial.
+Dinos, Baustelle, Häuser, Mandalas, Tiere, Meer, Fahrzeuge, Weltraum, Essen, Natur, Fantasie und neu: Weihnachten, Advent, Winter und Freies Malen zum Kritzeln auf leerer Fläche – jedes Motiv ist ein Original, ganz ohne Fremdmaterial.
 
 EINFACH FÜR KLEINE FINGER
 • Eimer: Farbe wählen, Fläche antippen – gefüllt wird exakt bis zum Rand
@@ -32,7 +32,7 @@ EINFACH FÜR KLEINE FINGER
 • Große Tasten, kaum Text und keine versehentlichen Wege aus dem Mal-Bildschirm
 
 IMMER WIEDER NEU – AUCH SAISONAL
-Wir erweitern Bunto laufend um neue Motive: passend zu den Jahreszeiten und Festen, zum Beispiel Ostern, Sommer, Halloween und Weihnachten. Alle Updates bleiben ohne Werbung und ohne In-App-Käufe.
+Wir erweitern Bunto laufend um neue Motive: passend zu den Jahreszeiten und Festen, zum Beispiel Ostern, Sommer und Halloween. Alle Updates bleiben ohne Werbung und ohne In-App-Käufe.
 
 FÜR ELTERN
 Bunto sammelt, speichert und sendet keine personenbezogenen Daten und enthält keine Drittanbieter-SDKs. Nur wenn Ihr Kind „In Fotos speichern“ tippt, fragt iOS nach Schreibzugriff auf die Fotos – gelesen werden Ihre Fotos nie. Entwickelt für die Kids Category, Altersfreigabe 4+.
@@ -60,7 +60,7 @@ NO ADS. NO IN-APP PURCHASES.
 Bunto contains no advertising and no in-app purchases – not in this version and not in future updates. No account, no login, no data collection, no outbound links. Everything works fully offline.
 
 128 HAND-DRAWN PICTURES IN 15 WORLDS
-Dinosaurs, construction, houses, mandalas, animals, ocean, vehicles, space, food, nature and fantasy – every picture is an original, with no third-party material.
+Dinosaurs, construction, houses, mandalas, animals, ocean, vehicles, space, food, nature, fantasy and – new – Christmas, Advent, Winter and Free Drawing for scribbling on a blank page – every picture is an original, with no third-party material.
 
 EASY FOR LITTLE FINGERS
 • Bucket: pick a color, tap an area – it fills right up to the edge
@@ -72,7 +72,7 @@ EASY FOR LITTLE FINGERS
 • Big buttons, hardly any text and no accidental ways out of the coloring screen
 
 ALWAYS SOMETHING NEW – SEASONAL TOO
-We keep adding new pictures for the seasons and holidays, for example Easter, summer, Halloween and Christmas. All updates stay free of ads and in-app purchases.
+We keep adding new pictures for the seasons and holidays, for example Easter, summer and Halloween. All updates stay free of ads and in-app purchases.
 
 FOR PARENTS
 Bunto does not collect, store or send any personal data and contains no third-party SDKs. Only when your child taps “Save to Photos” does iOS ask for write access to Photos – your photos are never read. Built for the Kids Category, age rating 4+.
@@ -80,7 +80,7 @@ Bunto does not collect, store or send any personal data and contains no third-pa
 FROM US TO YOU
 Bunto is made with love in Hamm, Germany, by Jörn Bergmeier, Bergmeier&Bergmeier GbR. Questions, wishes or ideas for new pictures? Write to us via bunto.webcoffee.io – we love hearing from you!
 
-**What's New:** First release of Bunto.
+**What's New:** New: Christmas, Advent and Winter worlds, a rainbow color and a Free Drawing page for scribbling. Now over 125 pictures in 15 worlds.
 
 ## Allgemein
 
