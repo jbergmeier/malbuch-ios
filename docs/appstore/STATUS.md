@@ -25,3 +25,9 @@ Version 1.0 (Build 1) ist zur App-Prüfung eingereicht, Status „Warten auf Pr�
 
 ## Update 18.11.2026 (später)
 Version 1.0 wurde aus der Prüfung genommen und mit **Build 2** (128 Motive, 15 Kategorien, Regenbogenfarbe) neu eingereicht (Status „Warten auf Prüfung“, 18:22). Veröffentlichung automatisch, Preis 0,79 €. Hinweis: Xcode erhöht beim Upload die Build-Nummer selbst; die Versionsnummer in `Info.plist` bleibt 1.0 (MARKETING_VERSION in project.yml wirkt nicht – für 1.1 ggf. die Info.plist-Erzeugung prüfen). Offen: Ostern, Halloween als nächste Updates.
+
+## Update 19.11.2026
+- Version 1.0 wurde von Apple freigegeben („Bereit für Vertrieb“, 15:41); EU-Händlerstatus (DSA) ist angegeben.
+- **Version 1.0.1 (Build 3)** am 19.11. zur Prüfung eingereicht („Warten auf Prüfung“): englische Lokalisierung (Name „Bunto – Coloring for Kids“, Untertitel „Ad-free coloring fun“, Texte, Keywords, englische Screenshots iPhone 1206×2622 / iPad 2064×2752), „Neu in dieser Version“ in DE/EN. Veröffentlichung automatisch nach Freigabe.
+- Versionsnummer wird jetzt aus `project.yml` (MARKETING_VERSION/CURRENT_PROJECT_VERSION) in die Info.plist übernommen.
+- Preis: in App Store Connect auf 0,99 € (Basisland Deutschland) gestellt bzw. zu prüfen; Webseite nennt 0,99 €.
